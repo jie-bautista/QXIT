@@ -1,0 +1,439 @@
+<!doctype html>
+<html lang="en">
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/f1bcdaf134.js" crossorigin="anonymous"></script>
+
+    <title>QX Attendance System</title>
+    <link rel="icon" href="logo.png">
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <div class="bar"></div>
+    <nav class="sidebar close">
+        <header>
+            <div class="image-text">
+                <span class="image">
+                    <img src="logo.svg" alt="">
+                </span>
+
+                <div class="text logo-text">
+                    <span class="name">Attendance System</span>
+                </div>
+            </div>
+
+            <i class="fa-solid fa-bars toggle"></i>
+        </header>
+
+        <div class="menu-bar">
+            <div class="menu">
+
+                <ul class="menu-links">
+                    <li class="nav-link">
+                        <a href="#" class="active">
+                            <div class="rectangle"></div>
+                            <i class="fa-solid fa-gauge icon"></i>
+                            <span class="text nav-text">Dashboard</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-link">
+                        <a href="report.html">
+                            <i class="fa-regular fa-file-lines icon"></i>
+                            <span class="text nav-text">Report</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-link">
+                        <a href="profile.html">
+                            <i class="fa-regular fa-circle-user icon"></i>
+                            <span class="text nav-text">Profile</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="bottom-content">
+                <li class="">
+                    <a data-bs-toggle="modal" data-bs-target="#logout">
+                        <i class="fa-solid fa-arrow-right-from-bracket icon"></i>
+                        <span class="text nav-text">Logout</span>
+                    </a>
+                </li>      
+            </div>
+        </div>
+
+    </nav>
+
+    <section class="home">
+        <div class="text"><i class="fa-regular fa-circle-user"></i>  John Doe</div>
+        <div class="timer_card rounded-3 shadow-sm">
+            <i class="fa-regular fa-circle-user fa-3x pt-4 px-3"></i>
+            <div class="timer_text p-3">
+                <h3 class="pt-1">John Doe</h3>
+                <h6 class="">IT Department</h6>
+            </div>
+            <div class="timer">
+                <div class="time fw-bold fs-5">
+                    00:00:00
+                </div>
+                <button id="control" class="control m-3 rounded-3 fw-bold fs-5">START</button>
+            </div>
+        </div>
+
+        <div class="attendance">
+            <h5>ATTENDANCE LOG</h5>
+            <div class="attendance-log rounded-3 shadow-sm">
+                
+                <table class="attendance rounded-2">
+                    <thead>
+                        <tr>
+                            <th>Date</th>
+                            <th>Time In</th>
+                            <th>Time Out</th>
+                            <th>Hours Worked</th>
+                            <th>Undertime</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>07/11/2022</td>
+                            <td>8:00:00</td>
+                            <td>17:00:00</td>
+                            <td>8:00:00</td>
+                            <td>0 hrs 0 mins</td>
+                            <td><i class="fa-regular fa-trash-can"></i></td>
+                        </tr>
+                        <tr>
+                            <td>07/12/2022</td>
+                            <td>8:00:00</td>
+                            <td>17:00:00</td>
+                            <td>8:00:00</td>
+                            <td>0 hrs 0 mins</td>
+                            <td><i class="fa-regular fa-trash-can"></i></td>
+                        </tr>
+                        <tr>
+                            <td> </td>
+                            <td> </td>
+                            <td> </td>
+                            <td> </td>
+                            <td> </td>
+                            <td> </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        
+        <h5 class="h5leave">LEAVE BALANCE</h5>
+        <div class="balance rounded-3 shadow-sm">
+            <div class="card2 bg-white rounded-3">
+                <div class="leave_balance rounded-3">
+                    <div class="box">
+                        <div class="vac p-2 text-center rounded-top">
+                            Vacation Leave
+                        </div>
+                        <div class="vac2 text-center p-2">
+                            <span class="fw-bolder fs-5">6/8</span>
+                            <span class="ava fst-italic text-center"><br>Available</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="leave_balance rounded-3">
+                    <div class="box">
+                        <div class="sick p-2 text-center rounded-top">
+                            Sick Leave
+                        </div>
+                        <div class="sick2 text-center p-2">
+                            <span class="fw-bolder fs-5">6/8</span>
+                            <span class="ava fst-italic text-center"><br>Available</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="leave_balance rounded-3">
+                    <div class="box">
+                        <div class="off p-2 text-center rounded-top">
+                            Offset
+                        </div>
+                        <div class="off2 text-center p-2">
+                            <span class="fw-bolder fs-5">6/8</span>
+                            <span class="ava fst-italic text-center"><br>Available</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <center>
+            <div class="leavebutton center">
+                <button class="open-button leavebtn fs-5 m-3 py-1 px-5 text-white rounded-3" data-bs-toggle="modal" data-bs-target="#leaveReq">Request Leave</button>
+            </div>
+            </center>
+        </div>
+
+        <div class="calendar rounded-3 shadow-sm">
+            <div class="calendar-header">
+                <span class="month-picker" id="month-picker">February</span>
+                <div class="year-picker">
+                    <span class="year-change" id="prev-year">
+                        <pre><</pre>
+                    </span>
+                    <span id="year">2021</span>
+                    <span class="year-change" id="next-year">
+                        <pre>></pre>
+                    </span>
+                </div>
+            </div>
+            <div class="calendar-body">
+                <div class="calendar-week-day">
+                    <div>Sun</div>
+                    <div>Mon</div>
+                    <div>Tue</div>
+                    <div>Wed</div>
+                    <div>Thu</div>
+                    <div>Fri</div>
+                    <div>Sat</div>
+                </div>
+                <div class="calendar-days"></div>
+            </div>
+            <div class="month-list"></div>
+        </div>
+
+        <div class="leave">
+            <h5>LEAVE REPORT</h5>
+            <div class="leaver-report rounded-3 shadow-sm">
+                
+                <table class="attendance rounded-2">
+                    <thead>
+                        <tr>
+                            <th>Type</th>
+                            <th>Date Filled</th>
+                            <th>Leave Date</th>
+                            <th>Reason</th>
+                            <th>Status</th>
+                            <th>Approver</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Vacation Leave</td>
+                            <td>July 1, 2022</td>
+                            <td>July 9, 2022</td>
+                            <td>Personal Errands</td>
+                            <td><span class="rounded-pill bg-success text-light p-2">Approved</span></td>
+                            <td>Jane Doe</td>
+                        </tr>
+                        <tr>
+                            <td>Vacation Leave</td>
+                            <td>July 11, 2022</td>
+                            <td>July 15, 2022</td>
+                            <td>Personal Errands</td>
+                            <td>Pending</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td> </td>
+                            <td> </td>
+                            <td> </td>
+                            <td> </td>
+                            <td> </td>
+                            <td> </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <div class="modal" id="leaveReq">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-xl">
+          <div class="modal-content">
+      
+            <!-- Modal Header -->
+            <div class="modal-header">
+              <h4 class="modal-title">Leave Request</h4>
+              <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+      
+            <!-- Modal body -->
+            <div class="modal-body">
+                <div id="myDatepicker" class="datepicker">
+
+                    <div class="date">
+                        <label for="id-textbox-1">Date</label>
+                    
+                        <div class="group">
+                            <input type="text" placeholder="mm/dd/yyyy" id="id-textbox-1" aria-describedby="id-description-1">
+                            <span class="desc" id="id-description-1">(<span class="sr-only">date format: </span>mm/dd/yyyy)</span>
+                            <button type="button" class="icon" aria-label="Choose Date">
+                            <span class="fa fa-calendar-alt fa-2x"></span>
+                            </button>
+                  
+                        </div>
+                  
+                    </div>
+                </div>
+                <div id="id-datepicker-1" class="datepicker-dialog" role="dialog" aria-modal="true" aria-label="Choose Date">
+
+                    <div class="header">
+                
+                      <button type="button" class="prev-year" aria-label="previous year">
+                        <span class="fas fa-angle-double-left fa-lg"></span>
+                      </button>
+                
+                      <button type="button" class="prev-month" aria-label="previous month">
+                        <span class="fas fa-angle-left fa-lg"></span>
+                      </button>
+                
+                      <h2 id="id-grid-label" class="month-year" aria-live="polite">
+                        February 2020
+                      </h2>
+                
+                      <button type="button" class="next-month" aria-label="next month">
+                        <span class="fas fa-angle-right fa-lg"></span>
+                      </button>
+                
+                      <button type="button" class="next-year" aria-label="next year">
+                        <span class="fas fa-angle-double-right fa-lg"></span>
+                      </button>
+                    </div>
+                
+                   <div class="table-wrap"><table class="dates" role="grid" aria-labelledby="id-grid-label">
+                      <thead>
+                        <tr>
+                          <th scope="col" abbr="Sunday">Su</th>
+                          <th scope="col" abbr="Monday">Mo</th>
+                          <th scope="col" abbr="Tuesday">Tu</th>
+                          <th scope="col" abbr="Wednesday">We</th>
+                          <th scope="col" abbr="Thursday">Th</th>
+                          <th scope="col" abbr="Friday">Fr</th>
+                          <th scope="col" abbr="Saturday">Sa</th>
+                        </tr>
+                      </thead>
+                
+                      <tbody>
+                        <tr>
+                          <td class="disabled" tabindex="-1"></td>
+                          <td class="disabled" tabindex="-1"></td>
+                          <td class="disabled" tabindex="-1"></td>
+                          <td class="disabled" tabindex="-1"></td>
+                          <td class="disabled" tabindex="-1"></td>
+                          <td class="disabled" tabindex="-1"></td>
+                          <td tabindex="-1" data-date="2020-02-01">1</td>
+                        </tr>
+                        <tr>
+                          <td tabindex="-1" data-date="2020-02-02">2</td>
+                          <td tabindex="-1" data-date="2020-02-03">3</td>
+                          <td tabindex="-1" data-date="2020-02-04">4</td>
+                          <td tabindex="-1" data-date="2020-02-05">5</td>
+                          <td tabindex="-1" data-date="2020-02-06">6</td>
+                          <td tabindex="-1" data-date="2020-02-07">7</td>
+                          <td tabindex="-1" data-date="2020-02-08">8</td>
+                        </tr>
+                        <tr>
+                          <td tabindex="-1" data-date="2020-02-09">9</td>
+                          <td tabindex="-1" data-date="2020-02-10">10</td>
+                          <td tabindex="-1" data-date="2020-02-11">11</td>
+                          <td tabindex="-1" data-date="2020-02-12">12</td>
+                          <td tabindex="-1" data-date="2020-02-13">13</td>
+                          <td tabindex="0" data-date="2020-02-14" role="gridcell" aria-selected="true">14</td>
+                          <td tabindex="-1" data-date="2020-02-15">15</td>
+                        </tr>
+                        <tr>
+                          <td tabindex="-1" data-date="2020-02-16">16</td>
+                          <td tabindex="-1" data-date="2020-02-17">17</td>
+                          <td tabindex="-1" data-date="2020-02-18">18</td>
+                          <td tabindex="-1" data-date="2020-02-19">19</td>
+                          <td tabindex="-1" data-date="2020-02-20">20</td>
+                          <td tabindex="-1" data-date="2020-02-21">21</td>
+                          <td tabindex="-1" data-date="2020-02-22">22</td>
+                        </tr>
+                        <tr>
+                          <td tabindex="-1" data-date="2020-02-23">23</td>
+                          <td tabindex="-1" data-date="2020-02-24">24</td>
+                          <td tabindex="-1" data-date="2020-02-25">25</td>
+                          <td tabindex="-1" data-date="2020-02-26">26</td>
+                          <td tabindex="-1" data-date="2020-02-27">27</td>
+                          <td tabindex="-1" data-date="2020-02-28">28</td>
+                          <td tabindex="-1" data-date="2020-02-29">29</td>
+                        </tr>
+                        <tr>
+                          <td tabindex="-1" data-date="2020-02-30">30</td>
+                          <td tabindex="-1" data-date="2020-02-31">31</td>
+                          <td class="disabled" tabindex="-1"></td>
+                          <td class="disabled" tabindex="-1"></td>
+                          <td class="disabled" tabindex="-1"></td>
+                          <td class="disabled" tabindex="-1"></td>
+                          <td class="disabled" tabindex="-1"></td>
+                        </tr>
+                      </tbody>
+                    </table></div>
+                
+                    <div class="dialog-ok-cancel-group">
+                      <button class="dialog-button" value="cancel">
+                        Cancel
+                      </button>
+                      <button class="dialog-button" value="ok">
+                        OK
+                      </button>
+                    </div>
+                    <div class="dialog-message" aria-live="polite"></div>
+                
+                  </div>
+            </div>
+      
+            <!-- Modal footer -->
+            <div class="modal-footer">
+              <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+            </div>
+      
+          </div>
+        </div>
+      </div>
+
+      <div class="modal" id="logout">
+        <div class="modal-dialog modal-dialog-centered rounded-3">
+          <div class="modal-content">
+      
+            <!-- Modal Header -->
+            <div class="modal-header">
+              <h4 class="modal-title"><img src="logo.svg" alt="">LOGOUT</h4>
+              <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+      
+            <!-- Modal body -->
+            <div class="modal-body">
+                Are you sure you want to sign out?
+            </div>
+      
+            <!-- Modal footer -->
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">CANCEL</button>
+                <a href="login.html"><button type="button" class="btn btn-danger" >LOGGOUT</button></a>
+            </div>
+      
+          </div>
+        </div>
+      </div>
+
+    <script>
+        const body = document.querySelector('body'),
+        sidebar = body.querySelector('nav'),
+        toggle = body.querySelector(".toggle");
+
+        toggle.addEventListener("click" , () =>{
+            sidebar.classList.toggle("close");
+        })
+    </script>
+    <script src="main.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+  </body>
+</html>

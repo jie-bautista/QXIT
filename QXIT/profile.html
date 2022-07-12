@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://kit.fontawesome.com/f1bcdaf134.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <title>QX Attendance System</title>
+    <link rel="icon" href="logo.png" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <div class="bar"></div>
+    <nav class="sidebar close">
+      <header>
+        <div class="image-text">
+          <span class="image">
+            <img src="logo.svg" alt="" />
+          </span>
+
+          <div class="text logo-text">
+            <span class="name">Attendance System</span>
+          </div>
+        </div>
+
+        <i class="fa-solid fa-bars toggle"></i>
+      </header>
+
+      <div class="menu-bar">
+        <div class="menu">
+          <ul class="menu-links">
+            <li class="nav-link">
+              <a href="dashboard.html">
+                <div class="rectangle"></div>
+                <i class="fa-solid fa-gauge icon"></i>
+                <span class="text nav-text">Dashboard</span>
+              </a>
+            </li>
+
+            <li class="nav-link">
+              <a href="report.html">
+                <i class="fa-regular fa-file-lines icon"></i>
+                <span class="text nav-text">Report</span>
+              </a>
+            </li>
+
+            <li class="nav-link">
+              <a href="profile.html" class="active">
+                <div class="rectangle"></div>
+                <i class="fa-regular fa-circle-user icon"></i>
+                <span class="text nav-text">Profile</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="bottom-content">
+          <li class="">
+            <a data-bs-toggle="modal" data-bs-target="#logout">
+              <i class="fa-solid fa-arrow-right-from-bracket icon"></i>
+              <span class="text nav-text">Logout</span>
+            </a>
+          </li>
+        </div>
+      </div>
+    </nav>
+
+    <section class="home">
+        <div class="text"><i class="fa-regular fa-circle-user"></i>  John Doe</div>
+        <div class="timer_card h3" style="background: none;">
+            PROFILE
+        </div>
+        <div class="profile text-center p-3">
+            <i class="fa-regular fa-10x fa-circle-user mb-3"></i>
+            <button class="pro btn-danger fs-5 rounded-3 my-1 p-2">Change Photo</button>
+            <button class="pro tn-secondary fs-5 rounded-3 p-2">Delete</button>
+        </div>
+
+        <div class="profcard rounded-3 shadow-lg p-5">
+            <table class="table table-borderless center">
+                <tr>
+                    <td><label for="fname">First Name</label></td>
+                    <td><label for="lname">Last Name</label></td>
+                </tr>
+                <tr>
+                    <td><input type="text" id="fname" class="rounded-3"></td>
+                    <td><input type="text" id="lname" class="rounded-3"></td>
+                </tr>
+                <tr>
+                    <td><label for="email">Email Address</label></td>
+                    <td><label for="num">Contact Number</label></td>
+                </tr>
+                <tr>
+                    <td><input type="text" id="email" class="rounded-3"></td>
+                    <td><input type="text" id="num" class="rounded-3"></td>
+                </tr>
+                <tr>
+                    <td><label for="dep">IT Department</label></td>
+                    <td><label for="job">Intern</label></td>
+                </tr>
+                <tr>
+                    <td><input type="text" id="dep" class="rounded-3"></td>
+                    <td><input type="text" id="job" class="rounded-3"></td>
+                </tr>
+                <tr>
+                    <td><label for="pass">New Password</label></td>
+                    <td><label for="cpass">Confirm New Password</label></td>
+                </tr>
+                <tr>
+                    <td><input type="text" id="pass" class="rounded-3"></td>
+                    <td><input type="text" id="cpass" class="rounded-3"></td>
+                </tr>
+                <tr>
+                    <td><label for="cur">Current Password</label></td>
+                </tr>
+                <tr>
+                    <td><input type="text" id="cur" class="rounded-3"></td>
+                </tr>
+            </table>
+            <div class="buttons">
+                <button class="btn-secondary p-2 rounded-pill">Cancel</button>
+                <button class="btn-danger p-2 rounded-pill">Save Changes</button>
+            </div>
+        </div>
+    </section>
+
+    <div class="modal" id="logout">
+      <div class="modal-dialog modal-dialog-centered rounded-3">
+        <div class="modal-content">
+          <!-- Modal Header -->
+          <div class="modal-header">
+            <h4 class="modal-title"><img src="logo.svg" alt="" />LOGOUT</h4>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+            ></button>
+          </div>
+
+          <!-- Modal body -->
+          <div class="modal-body">Are you sure you want to sign out?</div>
+
+          <!-- Modal footer -->
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              CANCEL
+            </button>
+            <a href="login.html"
+              ><button type="button" class="btn btn-danger">LOGGOUT</button></a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      const body = document.querySelector("body"),
+        sidebar = body.querySelector("nav"),
+        toggle = body.querySelector(".toggle");
+
+      toggle.addEventListener("click", () => {
+        sidebar.classList.toggle("close");
+      });
+    </script>
+    <script src="main.js"></script>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
